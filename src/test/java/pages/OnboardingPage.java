@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 import tests.local.LocalTestBase;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.back;
 
 public class OnboardingPage extends LocalTestBase {
 
@@ -25,5 +26,10 @@ public class OnboardingPage extends LocalTestBase {
     public OnboardingPage clickGetStarted() {
         $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_done_button")).click();
         return this;
+    }
+
+    @Step("Click get started")
+    public void goBack() {
+        back();
     }
 }
