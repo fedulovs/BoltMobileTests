@@ -1,7 +1,9 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
+import config.CredentialsConfig;
 import io.appium.java_client.android.AndroidDriver;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -10,9 +12,11 @@ import java.net.URL;
 
 public class SelenoidMobileDriver implements WebDriverProvider {
 
+    public static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
+
     public static URL getAppiumServerUrl() {
         try {
-            return new URL("https://user1:1234@selenoid.autotests.cloud/wd/hub");
+            return new URL("https://" + config.selenoidUser() + ":" + config.selenoidPass() + "@selenoid.autotests.cloud/wd/hub");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

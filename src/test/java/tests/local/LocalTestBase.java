@@ -18,6 +18,8 @@ public class LocalTestBase {
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
 
+        System.out.println("Device name: " + System.getProperty("device"));
+
         Configuration.browser = LocalMobileDriver.class.getName();
         Configuration.startMaximized = false;
         Configuration.browserSize = null;

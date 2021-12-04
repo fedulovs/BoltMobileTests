@@ -13,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LocalMobileDriver implements WebDriverProvider {
 
+    String device = System.getProperty("device");
+
     public static URL getAppiumServerUrl() {
         try {
             return new URL("http://127.0.0.1:4723/wd/hub");
@@ -25,15 +27,13 @@ public class LocalMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
 
         desiredCapabilities.setCapability("platformName", "Android");
-//        desiredCapabilities.setCapability("deviceName", "Pixel_4_XL_API_28");
-        desiredCapabilities.setCapability("deviceName", "EPHUT20515010400");
+        desiredCapabilities.setCapability("deviceName", device);
         desiredCapabilities.setCapability("version", "9.0");
         desiredCapabilities.setCapability("locale", "en");
         desiredCapabilities.setCapability("language", "en");
         desiredCapabilities.setCapability("appPackage", "org.wikipedia.alpha");
         desiredCapabilities.setCapability("appActivity", "org.wikipedia.main.MainActivity");
         desiredCapabilities.setCapability("app", getAbsolutePath("src/test/resources/app-alpha-universal-release.apk"));
-
 
         return new AndroidDriver(getAppiumServerUrl(), desiredCapabilities);
     }
