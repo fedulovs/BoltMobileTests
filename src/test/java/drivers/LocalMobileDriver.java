@@ -25,8 +25,8 @@ public class LocalMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
 
         desiredCapabilities.setCapability("platformName", "Android");
-        desiredCapabilities.setCapability("deviceName", "Pixel_4_XL_API_28");
-//        desiredCapabilities.setCapability("deviceName", "RF8N71SMG0H");
+//        desiredCapabilities.setCapability("deviceName", "Pixel_4_XL_API_28");
+        desiredCapabilities.setCapability("deviceName", "EPHUT20515010400");
         desiredCapabilities.setCapability("version", "9.0");
         desiredCapabilities.setCapability("locale", "en");
         desiredCapabilities.setCapability("language", "en");
