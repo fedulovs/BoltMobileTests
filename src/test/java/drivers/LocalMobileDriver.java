@@ -31,8 +31,9 @@ public class LocalMobileDriver implements WebDriverProvider {
         desiredCapabilities.setCapability("version", "9.0");
         desiredCapabilities.setCapability("locale", "en");
         desiredCapabilities.setCapability("language", "en");
-        desiredCapabilities.setCapability("appPackage", "org.wikipedia.alpha");
-        desiredCapabilities.setCapability("appActivity", "org.wikipedia.main.MainActivity");
+        desiredCapabilities.setCapability("appPackage", "ee.mtakso.client");
+        desiredCapabilities.setCapability("appActivity", ".activity.SplashHomeActivity");
+        desiredCapabilities.setCapability("appium:autoGrantPermissions", true);
         desiredCapabilities.setCapability("app", getAbsolutePath("src/test/resources/app-alpha-universal-release.apk"));
 
         return new AndroidDriver(getAppiumServerUrl(), desiredCapabilities);
