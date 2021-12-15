@@ -17,6 +17,7 @@ public class LoginPage extends LocalTestBase {
     SelenideElement input = $(MobileBy.id("ee.mtakso.client:id/phoneInputField"));
     SelenideElement loginWithFacebookBtn = $(MobileBy.id("ee.mtakso.client:id/loginWithFacebookBtn"));
     SelenideElement continueBtn = $(MobileBy.id("ee.mtakso.client:id/phoneInputContinue"));
+    SelenideElement incorrectPhoneError = $(MobileBy.id("ee.mtakso.client:id/incorrectPhoneError"));
 
     @Step("Check login page elements")
     public void assertLoginPageIsOpened() {
@@ -33,6 +34,23 @@ public class LoginPage extends LocalTestBase {
         return this;
     }
 
+    @Step("Type in phone input")
+    public LoginPage enterPhoneNumber(String number) {
+        input.sendKeys(number);
+        return this;
+    }
+
+    @Step("Click Continue")
+    public LoginPage clickContinue() {
+        continueBtn.click();
+        return this;
+    }
+
+    @Step("Check if incorrect phone number view is displayed")
+    public void assertIncorrectPhoneErrorIsDisplayed() {
+        incorrectPhoneError.shouldBe(Condition.visible);
+    }
+
     @Step("Open Facebook")
     public void openFacebook() {
         loginWithFacebookBtn.click();
@@ -46,6 +64,4 @@ public class LoginPage extends LocalTestBase {
         $(MobileBy.AccessibilityId("Forgot Password?")).shouldBe(Condition.visible);
         $(MobileBy.AccessibilityId("Create New Facebook Account")).shouldBe(Condition.visible);
     }
-
-
 }

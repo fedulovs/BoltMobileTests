@@ -33,7 +33,7 @@ public class SelectCountryPage extends LocalTestBase {
         return this;
     }
 
-    @Step("Type in phone input")
+    @Step("Check if placeholder is displayed")
     public SelectCountryPage assertPlaceholderDisplayed() {
         emptyListPlaceholder.shouldBe(visible);
         return this;

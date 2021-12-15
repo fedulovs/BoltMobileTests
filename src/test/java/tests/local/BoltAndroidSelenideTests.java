@@ -23,6 +23,14 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     }
 
     @Test
+    void enterWrongNumber() {
+        loginPage
+                .enterPhoneNumber("711111111111111111111")
+                .clickContinue()
+                .assertIncorrectPhoneErrorIsDisplayed();
+    }
+
+    @Test
     void searchForEstoniaInCountriesList() {
         loginPage.openCountriesPage();
         countryPage.enterPhoneNumber("+372");
@@ -31,8 +39,9 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     @Test
     void failedSearch() {
         loginPage.openCountriesPage();
-        countryPage.enterPhoneNumber("11");
-        countryPage.assertPlaceholderDisplayed();
+        countryPage
+                .enterPhoneNumber("11")
+                .assertPlaceholderDisplayed();
     }
 
     @Test
@@ -40,6 +49,4 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
         loginPage.openFacebook();
         loginPage.assertFacebookOpened();
     }
-
-
 }
