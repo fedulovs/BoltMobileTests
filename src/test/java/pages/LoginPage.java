@@ -62,6 +62,6 @@ public class LoginPage extends LocalTestBase {
         $(MobileBy.AccessibilityId("Password")).shouldBe(Condition.visible);
         $(MobileBy.AccessibilityId("Log In")).shouldBe(Condition.visible);
         $(MobileBy.AccessibilityId("Forgot Password?")).shouldBe(Condition.visible);
-        $(MobileBy.AccessibilityId("Create New Facebook Account")).shouldBe(Condition.visible);
+//        $(MobileBy.AccessibilityId("Create New Facebook Account")).shouldBe(Condition.visible);
     }
 }

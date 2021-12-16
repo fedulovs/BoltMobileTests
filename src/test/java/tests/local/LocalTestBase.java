@@ -3,6 +3,7 @@ package tests.local;
 import com.codeborne.selenide.Configuration;
 import drivers.LocalMobileDriver;
 import helpers.Attach;
+import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -27,6 +28,7 @@ public class LocalTestBase {
     }
 
     @BeforeEach
+    @Step("Open activity")
     public void startDriver() {
         open();
     }

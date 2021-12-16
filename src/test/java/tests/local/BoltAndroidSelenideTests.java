@@ -39,6 +39,15 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     }
 
     @Test
+    @DisplayName("Go back from countries list")
+    @Description("Open countries list and go back using Back button")
+    void goBackFromCountriesList() {
+        loginPage.openCountriesPage();
+        countryPage.goBack();
+        loginPage.assertLoginPageIsOpened();
+    }
+
+    @Test
     @DisplayName("Search in countries list")
     @Description("Search for Estonia in numbers list")
     void searchForEstoniaInCountriesList() {

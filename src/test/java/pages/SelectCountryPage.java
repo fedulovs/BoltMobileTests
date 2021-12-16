@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SelectCountryPage extends LocalTestBase {
+    SelenideElement backBtn = $(MobileBy.AccessibilityId("Back"));
     SelenideElement input = $(MobileBy.className("android.widget.EditText"));
     SelenideElement hint = $(MobileBy.id("ee.mtakso.client:id/hint"));
     SelenideElement sectionName = $(MobileBy.id("ee.mtakso.client:id/countrySectionName"));
@@ -16,7 +17,6 @@ public class SelectCountryPage extends LocalTestBase {
     SelenideElement countryName = $(MobileBy.id("ee.mtakso.client:id/countryName"));
     SelenideElement phonePrefix = $(MobileBy.id("ee.mtakso.client:id/phonePrefix"));
     SelenideElement emptyListPlaceholder = $(MobileBy.id("ee.mtakso.client:id/countryNotFound"));
-    SelenideElement title = $(MobileBy.AccessibilityId("Select country code"));
 
     @Step("Check login page elements")
     public void assertCountryPageIsOpened() {
@@ -24,7 +24,7 @@ public class SelectCountryPage extends LocalTestBase {
         sectionName.shouldBe(visible);
         countryName.shouldBe(visible);
         phonePrefix.shouldBe(visible);
-        title.shouldBe(visible);
+        backBtn.shouldBe(visible);
     }
 
     @Step("Type in phone input")
@@ -37,5 +37,10 @@ public class SelectCountryPage extends LocalTestBase {
     public SelectCountryPage assertPlaceholderDisplayed() {
         emptyListPlaceholder.shouldBe(visible);
         return this;
+    }
+
+    @Step("Check if placeholder is displayed")
+    public void goBack() {
+        backBtn.click();
     }
 }
