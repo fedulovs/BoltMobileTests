@@ -30,3 +30,10 @@ This suite doesn't pretend to be exaustive
 5. Search country in countries list
 6. Check empty list placeholder
 7. Open Facebook
+
+## Allure report
+
+Each test has screenshot and page source attached
+
+![allure report](./images/AllureReport.png)
+
