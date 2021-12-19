@@ -1,5 +1,6 @@
 package tests.local;
 
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -14,6 +15,7 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     SelectCountryPage countryPage = new SelectCountryPage();
 
     @Test
+    @AllureId("6239")
     @DisplayName("Open Login page")
     @Description("Check if Login page items are displayed")
     void openLoginPage() {
@@ -21,6 +23,7 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     }
 
     @Test
+    @AllureId("6240")
     @DisplayName("Open Country page")
     @Description("Check if Country page items are displayed")
     void openCountryPage() {
@@ -29,6 +32,7 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     }
 
     @Test
+    @AllureId("6245")
     @DisplayName("Enter wrong number")
     @Description("Check the presence of error when incorrect number was entered")
     void enterWrongNumber() {
@@ -39,6 +43,7 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     }
 
     @Test
+    @AllureId("6241")
     @DisplayName("Go back from countries list")
     @Description("Open countries list and go back using Back button")
     void goBackFromCountriesList() {
@@ -48,6 +53,7 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     }
 
     @Test
+    @AllureId("6242")
     @DisplayName("Search in countries list")
     @Description("Search for Estonia in numbers list")
     void searchForEstoniaInCountriesList() {
@@ -56,6 +62,7 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     }
 
     @Test
+    @AllureId("6243")
     @DisplayName("Check empty list placeholder")
     @Description("Search for incorrect country code to see placeholder")
     void failedSearch() {
@@ -66,6 +73,7 @@ public class BoltAndroidSelenideTests extends LocalTestBase {
     }
 
     @Test
+    @AllureId("6244")
     @DisplayName("Open Facebook")
     @Description("Check if Facebook opens from login page")
     void openFacebook() {
