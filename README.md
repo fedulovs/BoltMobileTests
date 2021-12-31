@@ -31,6 +31,16 @@ This suite doesn't pretend to be exaustive
 6. Check empty list placeholder
 7. Open Facebook
 
+## Job settings
+
+Test could be launched from Jenkins with 3 device farm options: 
+
+* local
+* selenoid
+* browserstack
+
+![jenkins settings](./images/JobSettings.png)
+
 ## Allure report
 
 Each test has screenshot and page source attached
