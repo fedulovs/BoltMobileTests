@@ -1,4 +1,4 @@
-package tests.browserstack;
+package tests.selenoid;
 
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
@@ -8,9 +8,8 @@ import org.junit.jupiter.api.Test;
 import pages.LoginPage;
 import pages.SelectCountryPage;
 
-@Tag("browserstack_android")
-public class BrowserStackAndroidSelenideTests extends BrowserStackTestBase {
-
+@Tag("selenoid_android")
+public class BoltSelenoidTests extends SelenoidTestBase {
     LoginPage loginPage = new LoginPage();
     SelectCountryPage countryPage = new SelectCountryPage();
 
