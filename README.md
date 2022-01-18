@@ -11,6 +11,10 @@
 <code><img height="30" src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg"></code>
 <code><img height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"></code>
 <code><img height="30" src="https://starchenkov.pro/qa-guru/img/skills/Allure_Report.svg"></code>
+<code><img height="30" src="https://starchenkov.pro/qa-guru/img/skills/Browserstack.svg"></code>
+<code><img height="30" src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg"></code>
+
+
 ## Description
 
 Project contains Appium tests on first two screens Android application.
@@ -30,6 +34,16 @@ This suite doesn't pretend to be exaustive
 5. Search country in countries list
 6. Check empty list placeholder
 7. Open Facebook
+
+## Job settings
+
+Test could be launched from Jenkins with 3 device farm options: 
+
+* local
+* selenoid
+* browserstack
+
+![jenkins settings](./images/JobSettings.png)
 
 ## Allure report
 
