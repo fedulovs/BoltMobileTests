@@ -41,7 +41,8 @@ public class SelenoidMobileDriver implements WebDriverProvider {
 
     private URL apkUrl() {
         try {
-            return new URL("https://github.com/wikimedia/apps-android-wikipedia/releases/download/latest/app-alpha-universal-release.apk");
+            // TODO: Add real Bolt APK URL in quotes on next line
+            return new URL("");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
